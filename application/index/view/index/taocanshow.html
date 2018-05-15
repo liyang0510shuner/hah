@@ -1,0 +1,179 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <style>
+        .active{
+            margin-left:40px;color:#FF9933;padding-bottom: 5px;border-bottom:  1px solid #AAAAAA;
+        }
+    </style>
+   {include file="common/header"}
+   <div class="met-banner banner-ny-h" data-height='' style=''>
+            <div class="slick-slide">
+                <img class="cover-image" src="__IMGS__/1510131128.jpg" sizes="(max-width: 767px) 767px" alt="活动套餐">
+            </div>
+        </div>
+        <section class="met-shownews animsition">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 met-shownews-body">
+                        <div class="row">
+                            <div class="met-shownews-header">
+                                <h1>
+                                    <?=$arr['t_name']?>
+                                </h1>
+                                <div class="info">
+                                    <span>
+                                        <?=$arr['t_time']?>
+                                    </span>
+                                    <span>
+                                        admin
+                                    </span>
+                                    <span>
+                                        <i class="icon wb-eye margin-right-5" aria-hidden="true">
+                                        <?=$ip?>
+                                        </i>
+                                        <script src="__JS__/email-decode.min.js">
+                                        </script>
+                                        <script src="__JS__/count.js" type='text/javascript' language="javascript">
+                                        </script>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class='met-showimg-con bg-white'>
+                                <div class='met-showimg-list fngallery margin-0 text-center slick-dotted'
+                                id="met-imgs-carousel">
+                                    <div class='slick-slide lg-item-box'  data-src="__IMGS__/1-1g129100312.jpg"
+                                    data-exthumbimage="__IMGS__/1-1g129100312.jpg">
+                                        <span>
+                                            <img src="__IMGS__/1-1g129100312.jpg" class="img-responsive"  alt="" />
+                                        </span>
+                                    </div>
+                                    <div class='slick-slide lg-item-box' data-src="__IMGS__/1-1g129100314.jpg"
+                                    data-exthumbimage="__IMGS__/1-1g129100314.jpg">
+                                        <span>
+                                            <img src="__IMGS__/1-1g129100314.jpg" class="img-responsive" alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="met-editor lazyload clearfix">
+                                <div>
+                                    <h4 class="active">套餐介绍</h4>
+                                    <H4 style="margin-left:40px;margin-top:20px;font-weight:bold;color:#FF9933;">行程安排</H4>
+                                    <p style="margin-left:40px;font-weight:bold;font-size:15px;"><?=$arr['t_comment']?></p>
+                                    <hr style="margin-left:40px;height:2px;border:none;border-top:1px dashed  #185598;">
+                                    <H4 style="margin-left:40px;margin-top:20px;font-weight:bold;color:#66cc66;">其他自费娱乐项目</H4>
+                                    <p style="margin-left:40px;font-weight:bold;font-size:15px;">卡丁车、真人CS、团建、垂钓、采摘、等；</p>
+                                    <hr style="margin-left:40px;height:2px;border:none;border-top:1px dashed  #185598;">
+                                    <H4 style="margin-left:40px;margin-top:20px;font-weight:bold;color:#FF9933;">赠送</H4>
+                                    <p style="margin-left:40px;font-weight:bold;font-size:15px;">30人以上团队</p>
+                                    <p style="margin-left:40px;font-weight:bold;font-size:15px;">赠送篝火晚会</p>
+                                    <p style="margin-left:40px;font-weight:bold;font-size:15px;"> 免费停车！ </p>
+                                    <hr style="margin-left:40px;height:5px;border:none;border-top:1px dashed   green;" />
+                                    <H4 style="margin-left:40px;margin-top:20px;font-weight:bold;color:#FF9933;">购买须知</H4>
+                                    <p>  </p>
+                                    <p style="margin-left:40px;font-size:16px;font-weight:bold;color:green;">有效期：</p>
+                                    <p style="margin-left:40px;font-size:15px;"><?=date("Y-m-d",$arr['t__start_time'])?> 至 <?=date("Y-m-d",$arr['t_end_time'])?>（周末、法定节假日通用）</p>
+                                    <p style="margin-left:40px;font-size:16px;font-weight:bold;color:green;">预约方式：</p>
+                                    <p style="margin-left:40px;font-size:15px;">电话预约，提前72小时</p>
+                                    <p style="margin-left:40px;font-size:16px;font-weight:bold;color:green;">入住须知：</p>
+                                    <p style="margin-left:40px;font-size:15px;"> 请在14:00以后入住并于次日12:00以前退房；如需提前入住或延时退房，请咨询店家入住需要押金，金额以前台为准,并出示身份证（一人一证），身高1.2米（不含）以上算成人请不要携带宠物入住！ </p>
+                                    <p style="margin-left:40px;font-size:16px;font-weight:bold;color:green;">使用规则：</p><p style="margin-left:40px;font-size:15px;">  不可与其他优惠同享一旦消费成功，不可申请“退款”和“过期退款”，请您合理安排时间多张券可连续入住！  </p>
+                                    <p></p>
+                                    <div id="metinfo_additional">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="met-shownews-footer">
+                                <ul class="pager pager-round">
+                                    <li >
+                                    <?php if($brr['t_id'] == "") {?>
+                                        <a href="javascript:void(0)">
+                                            上一篇
+                                            <span aria-hidden='true' class='hidden-xs'>
+                                                ：<?=$brr['t_name']?>
+                                            </span>
+                                        </a>
+                                    <?php }else{?>
+                                        <a href="{:url('index/taocanshow')}?t_id=<?=$brr['t_id']?>">
+                                            上一篇
+                                            <span aria-hidden='true' class='hidden-xs'>
+                                                ：<?=$brr['t_name']?>
+                                            </span>
+                                        </a>
+                                    <?php }?>
+                                    </li>
+                                    <li >
+                                    <?php if($crr['t_id'] == "") { ?>
+                                        <a href="javascript:void(0)">
+                                            下一篇
+                                            <span aria-hidden='true' class='hidden-xs'>
+                                                ：<?=$crr['t_name']?>
+                                            </span>
+                                        </a>
+                                    <?php }else{?>
+                                        <a href="{:url('index/taocanshow')}?t_id=<?=$crr['t_id']?>">
+                                            下一篇
+                                            <span aria-hidden='true' class='hidden-xs'>
+                                                ：<?=$crr['t_name']?>
+                                            </span>
+                                        </a>
+                                    <?php }?>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="met-news-bar">
+                                <form name="formsearch" action="/plus/search.php">
+                                    <input type="hidden" name="kwtype" value="0" />
+                                    <input type='hidden' name='typeid' value="18,19">
+                                    <div class="form-group">
+                                        <div class="input-search">
+                                            <button type="submit" class="input-search-btn">
+                                                <i class="icon wb-search" aria-hidden="true">
+                                                </i>
+                                            </button>
+                                            <input type="text" class="form-control" name="q" placeholder="Search">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="recommend news-list-md">
+                                    <h3>
+                                        为您推荐
+                                    </h3>
+                                    <ul class="list-group list-group-bordered">
+                                        <li class="list-group-item">
+                                            <a href="#"​ title="北大青鸟新途校区学生拓展加烧烤及休闲" target='_self'>
+                                                北大青鸟新途校区学生拓展加烧烤及休闲
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#"​ title="某某中学1411班新年亲子拓展活动" target='_self'>
+                                                某某中学1411班新年亲子拓展活动
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#"​ title="CS丛林野战" target='_self'>
+                                                CS丛林野战
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="column">
+                                    <li>
+                                        <a href="#"​ title="所有文章" target='_self'>
+                                            所有文章
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {include file="common/top"}
+
+</html>

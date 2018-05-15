@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+   {include file="common/header"}
+        <div class="met-banner banner-ny-h" data-height='' style=''>
+            <div class="slick-slide">
+                <img class="cover-image" src="__IMG__/3.jpg"
+                alt="农庄简介">
+            </div>
+        </div>
+        <div class="met-column-nav ">
+            <div class="container">
+                <div class="row">
+                    <div class="sidebar-tile">
+                        <ul class="met-column-nav-ul invisible-xs">
+                            <li>
+                                <a href="{:url('index/about')}" class='link'>
+                                    景区介绍
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{:url('index/about2')}"​ class="link">
+                                    景区风光
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{:url('index/about3')}"​ class="link active">
+                                    景区攻略
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="met-show animsition">
+            <div class="container">
+                <div class="row">
+                    <div class="met-editor lazyload clearfix">
+                    <?php foreach($arr as $key => $val) { ?>
+                        <div><b style="font-size:22px;"><?=$val['g_title']?></b><em style="font-size:12px;margin-left:20px;"><?=date("Y-m-d",$val['g_time'])?></em style="size:2px;"></div>
+                        <div>
+                            <p style="text-indent:2em;letter-spacing:2px;font-size:16px;"><?=$val['g_content']?></p>
+                        </div>
+                    <?php }?>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+             <!--底部-->
+     {include file="common/top"}
+     <!--  <底部>-->
+
+</html>

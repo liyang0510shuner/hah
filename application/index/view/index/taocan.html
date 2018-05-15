@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+   {include file="common/header"}
+        <div class="met-banner banner-ny-h" data-height='' style=''>
+            <div class="slick-slide">
+                <img class="cover-image" src="__IMGS__/1510131128.jpg" sizes="(max-width: 767px) 767px" alt="活动套餐">
+            </div>
+        </div>
+        <section class="met-news animsition ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 met-news-body">
+                        <div class="row">
+                            <div class="met-news-list">
+                                <ul class="met-page-ajax" data-scale='0.71428571428571'>
+                                <?php foreach($arr as $key => $val) { ?>
+                                    <li class="">
+                                        <div class="media media-lg">
+                                            <div class="media-left">
+                                                <a href="{:url('index/taocanshow')}?t_id=<?=$val['t_id']?>"​ title="<b><?=$val['t_name']?></b>"
+                                                target='_self'>
+                                                    <img class="media-object" src="__IMGS__/1-1g1291000550-l.jpg" style='height:150px;'
+                                                    alt="<b><?=$val['t_name']?></b>">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading">
+                                                    <a href="{:url('index/taocanshow')}?t_id=<?=$val['t_id']?>"​ title="<b><?=$val['t_name']?></b>"
+                                                    target='_self'>
+                                                        <b>
+                                                            <?=$val['t_name']?>
+                                                        </b>
+                                                    </a>
+                                                </h4>
+                                                <p class="des">
+                                                    <?=mb_substr($val['t_comment'],0,100,'utf8')?>
+                                                </p>
+                                                <p class="info">
+                                                    <span>
+                                                        <?=date("Y-m-d",$val['t_time'])?>
+                                                    </span>
+                                                    <span>
+
+                                                    </span>
+                                                    <span>
+                                                        <i class="icon wb-eye margin-right-5" aria-hidden="true"></i>
+
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                <?php }?>
+                                </ul>
+                                <div>
+                                    <div class='met_pager'>
+                                    </div>
+                                </div>
+                                        {$page}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="met-news-bar">
+                                <form name="formsearch" action="/plus/search.php">
+                                    <input type="hidden" name="kwtype" value="0" />
+                                    <input type='hidden' name='typeid' value="18,19">
+                                    <div class="form-group">
+                                        <div class="input-search">
+                                            <button type="submit" class="input-search-btn">
+                                                <i class="icon wb-search" aria-hidden="true">
+                                                </i>
+                                            </button>
+                                            <input type="text" class="form-control" name="q" placeholder="Search">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="recommend news-list-md">
+                                    <h3>
+                                        为您推荐
+                                    </h3>
+                                    <ul class="list-group list-group-bordered">
+                                        <li class="list-group-item">
+                                            <a href="taocanshow.html"​ title="北大青鸟新途校区学生拓展加烧烤及休闲" target='_self'>
+                                                北大青鸟新途校区学生拓展加烧烤及休闲
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="taocanshow.html"​ title="某某中学1411班新年亲子拓展活动" target='_self'>
+                                                某某中学1411班新年亲子拓展活动
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="taocanshow.html"​ title="CS丛林野战" target='_self'>
+                                                CS丛林野战
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="column">
+                                    <li>
+                                        <a href="taocanshow.html"​ title="所有文章" target='_self'>
+                                            所有文章
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {include file="common/top"}
+
+</html>
